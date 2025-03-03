@@ -1,0 +1,43 @@
+services:
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    environment:
+      - node.name=es01
+      - cluster.name=my-cluster
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - cluster.initial_master_nodes=es01,es02,es03 # Used only for initial cluster formation. One of these nodes will be elected as the first master.
+      - discovery.seed_hosts=es02,es03 # This node will contact these nodes to get cluster information when joining the cluster.
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9201:9200
+  es02:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    environment:
+      - node.name=es02
+      - cluster.name=my-cluster
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - cluster.initial_master_nodes=es01,es02,es03
+      - discovery.seed_hosts=es01,es03
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9202:9200
+  es03:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    environment:
+      - node.name=es03
+      - cluster.name=my-cluster
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - cluster.initial_master_nodes=es01,es02,es03
+      - discovery.seed_hosts=es01,es02
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - 9203:9200
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.17.0
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_HOSTS=["http://es01:9200","http://es02:9200","http://es03:9200"]
