@@ -352,4 +352,25 @@ It means the es01, es02, es03 can be master, data node,
 
 By default, each node in the cluster will be playing the coordination role.
 Even if you set the data role to the node, it will also be doing the coordination.
-If you want to make a node only play the coordination role, then you need to set `node.roles:[]` 
+If you want to make a node only play the coordination role, then you need to set `node.roles:[]`
+
+### How Many Primary Shards Should I Create?
+
+* Max number of documents per shard is 2.1 Billion
+* A shard can handle 25-50 GB in that range efficiency
+* Too many shards will affect the cluster management/operations.
+
+### How to change My Primary Shard Count
+
+If the index is empty. Delete the index. Then recreate the index with the correct settings.
+
+If the index is not empty. We can't do this; it would affect the setting documents indexed already.
+Because the routing with id. It means when we hash the id with four shards, for example. When we add one more, then we
+get
+this. It will use hash with five shards ⇒ wrong shard.
+
+⇒ Create a new index with five shards. Migrate or take the documents from the old to the new index.
+
+### How many replica shards should I create?
+
+* At lease 1 for production environment
