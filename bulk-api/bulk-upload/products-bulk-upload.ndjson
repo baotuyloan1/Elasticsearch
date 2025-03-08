@@ -1,0 +1,20 @@
+{ "create" : {} }
+{ "name" : "Wireless Earbuds", "category": "electronics", "price": 199.99, "rating": 4.5, "stock": 20 }
+{ "create" : {} }
+{ "name" : "Men's Running Shoes", "category": "clothing", "price": 79.99, "rating": 4.2, "stock": 50 }
+{ "create" : {} }
+{ "name" : "Ceramic Dinner Set", "category": "home", "price": 119.99, "rating": 4.7, "stock": 30 }
+{ "create" : {} }
+{ "name" : "Organic Face Wash", "category": "beauty", "price": 15.99, "rating": 4.0, "stock": 100 }
+{ "create" : {} }
+{ "name" : "Yoga Mat", "category": "sports", "price": 29.99, "rating": 4.6, "stock": 25 }
+{ "create" : {} }
+{ "name" : "Bluetooth Speaker", "category": "electronics", "price": 59.99, "rating": 4.8, "stock": 10 }
+{ "create" : {} }
+{ "name" : "Women's Winter Jacket", "category": "clothing", "price": 129.99, "rating": 4.3, "stock": 40 }
+{ "create" : {} }
+{ "name" : "Non-stick Frying Pan", "category": "home", "price": 39.99, "rating": 4.5, "stock": 35 }
+{ "create" : {} }
+{ "name" : "Sunscreen Lotion", "category": "beauty", "price": 9.99, "rating": 4.1, "stock": 150 }
+{ "create" : {} }
+{ "name" : "Tennis Racket", "category": "sports", "price": 89.99, "rating": 4.4, "stock": 18 }
