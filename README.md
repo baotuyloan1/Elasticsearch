@@ -374,3 +374,8 @@ this. It will use hash with five shards ⇒ wrong shard.
 ### How many replica shards should I create?
 
 * At lease 1 for production environment
+
+## Bulk Request
+
+- We use NDJSON for bulk request. Application/json is not supported.
+- Application/x-ndjson is supported.

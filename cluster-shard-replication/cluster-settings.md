@@ -12,7 +12,7 @@ POST /my-index/_doc
 /*
     cluster settings, by default it not include the default values
         persistent - permanent (recommended)
-        tránient - temporary 
+        transient - temporary 
 */
 GET /_cluster/settings
 
