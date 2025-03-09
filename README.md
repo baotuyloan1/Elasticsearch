@@ -379,3 +379,29 @@ this. It will use hash with five shards ⇒ wrong shard.
 
 - We use NDJSON for bulk request. Application/json is not supported.
 - Application/x-ndjson is supported.
+
+
+## Analyzer
+
+- A component used for text analysis during indexing and searching of text fields.
+- It breaks down text into tokens (terms) that can be searched efficiently.
+
+![img_10.png](img_10.png)
+
+The analyzer has three subcomponents: character filters, tokenizer, token filters.
+1. Character filters: Its main purpose is to do some pre-processing, remove HTML characters or remove characters, replace characters, normalize the text, stripping characters.
+2. Tokenizer: Receive the input from character filters and split that into tokens or terms.
+3. The token filter will get the list of tokens, and it will do some processing or transformation on each token it receives. It can also remove tokens from the list. For example, the token filter can be configured to take the token with the minimum three letters.
+
+![img_11.png](img_11.png)
+
+character filters: optional (0,1,2... N)
+tokenizer: required (1)
+token filters: optional (0,1,2... N)
+
+![img_12.png](img_12.png)
+ 
+
+1. Char Filter: html_strip, mapping, pattern_replace.
+2. Tokenizer: standard(default), uax_url_email, letter, whitespace, keyword.
+3. Token Filter: lowercase, uppercase, length, unique, synonym (couch/sofa), stop (a, an, the..), stemmer (played ⇒ play).
