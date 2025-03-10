@@ -380,7 +380,6 @@ this. It will use hash with five shards ⇒ wrong shard.
 - We use NDJSON for bulk request. Application/json is not supported.
 - Application/x-ndjson is supported.
 
-
 ## Analyzer
 
 - A component used for text analysis during indexing and searching of text fields.
@@ -389,9 +388,13 @@ this. It will use hash with five shards ⇒ wrong shard.
 ![img_10.png](img_10.png)
 
 The analyzer has three subcomponents: character filters, tokenizer, token filters.
-1. Character filters: Its main purpose is to do some pre-processing, remove HTML characters or remove characters, replace characters, normalize the text, stripping characters.
+
+1. Character filters: Its main purpose is to do some pre-processing, remove HTML characters or remove characters,
+   replace characters, normalize the text, stripping characters.
 2. Tokenizer: Receive the input from character filters and split that into tokens or terms.
-3. The token filter will get the list of tokens, and it will do some processing or transformation on each token it receives. It can also remove tokens from the list. For example, the token filter can be configured to take the token with the minimum three letters.
+3. The token filter will get the list of tokens, and it will do some processing or transformation on each token it
+   receives. It can also remove tokens from the list. For example, the token filter can be configured to take the token
+   with the minimum three letters.
 
 ![img_11.png](img_11.png)
 
@@ -400,8 +403,36 @@ tokenizer: required (1)
 token filters: optional (0,1,2... N)
 
 ![img_12.png](img_12.png)
- 
 
 1. Char Filter: html_strip, mapping, pattern_replace.
 2. Tokenizer: standard(default), uax_url_email, letter, whitespace, keyword.
-3. Token Filter: lowercase, uppercase, length, unique, synonym (couch/sofa), stop (a, an, the..), stemmer (played ⇒ play).
+3. Token Filter: lowercase, uppercase, length, unique, synonym (couch/sofa), stop (a, an, the..), stemmer (played ⇒
+   play).
+
+## Data Mapping
+
+### Data Types
+
+- integer/long/float/double/short/byte
+- boolean
+- data
+- object, nested
+- keyword
+- text
+
+Text analysis is done for text fields. (Analyzer/Inverted index)
+
+Keyword: Store the value as it is in inverted index. Text analysis is skipped (not analyzed).
+This field will be used for exact match.
+
+Numeric fields are NOT analyzed. THey are stored in a BKD(Bounding K-D Tree) tree to efficiently build range queries.
+It a numeric field will NOT be used in the range queries, then use a keyword type. For example product id (2315123),
+phone (0905...) zip code (12345), etc.
+
+Date field can be with timestamp, without timestamp, epoch. Date fields are stored as long (for faster indexing and
+building range queries). The date field is also stored in the BKD tree.
+The date will be converted to a long value. It's basically represented the number of milliseconds since the epoch.
+UTF (default if not specified).
+
+
+
