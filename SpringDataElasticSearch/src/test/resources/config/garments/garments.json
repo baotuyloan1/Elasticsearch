@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Floral Summer",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Red",
+      "Pink"
+    ],
+    "material": "Cotton",
+    "brand": "Zara",
+    "occasion": "Casual",
+    "neckStyle": "V-Neck",
+    "price": 49
+  },
+  {
+    "name": "Evening Gown",
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Black",
+      "Navy"
+    ],
+    "material": "Silk",
+    "brand": "H&M",
+    "occasion": "Formal",
+    "neckStyle": "Off-Shoulder",
+    "price": 129
+  },
+  {
+    "name": "Casual Maxi",
+    "size": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "color": [
+      "Blue",
+      "White"
+    ],
+    "material": "Cotton",
+    "brand": "Forever 21",
+    "occasion": "Casual",
+    "neckStyle": "Round",
+    "price": 39
+  },
+  {
+    "name": "Cocktail",
+    "size": [
+      "S",
+      "M"
+    ],
+    "color": [
+      "Green",
+      "Emerald"
+    ],
+    "material": "Satin",
+    "brand": "Zara",
+    "occasion": "Party",
+    "neckStyle": "Halter",
+    "price": 79
+  },
+  {
+    "name": "Office Wear Sheath",
+    "size": [
+      "M",
+      "L"
+    ],
+    "color": [
+      "Gray",
+      "Black"
+    ],
+    "material": "Polyester",
+    "brand": "Mango",
+    "occasion": "Work",
+    "neckStyle": "Boat Neck",
+    "price": 59
+  },
+  {
+    "name": "Casual Wrap",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Beige",
+      "Brown"
+    ],
+    "material": "Cotton",
+    "brand": "Forever 21",
+    "occasion": "Casual",
+    "neckStyle": "V-Neck",
+    "price": 44
+  },
+  {
+    "name": "Velvet Party",
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Maroon",
+      "Burgundy"
+    ],
+    "material": "Velvet",
+    "brand": "Zara",
+    "occasion": "Party",
+    "neckStyle": "Halter",
+    "price": 99
+  },
+  {
+    "name": "Satin Slip",
+    "size": [
+      "XS",
+      "S"
+    ],
+    "color": [
+      "Champagne",
+      "Gold"
+    ],
+    "material": "Satin",
+    "brand": "H&M",
+    "occasion": "Formal",
+    "neckStyle": "Spaghetti Strap",
+    "price": 89
+  },
+  {
+    "name": "Summer Boho",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Yellow",
+      "Orange"
+    ],
+    "material": "Cotton",
+    "brand": "Mango",
+    "occasion": "Casual",
+    "neckStyle": "Square",
+    "price": 54
+  },
+  {
+    "name": "A-Line Midi",
+    "size": [
+      "M",
+      "L"
+    ],
+    "color": [
+      "Navy",
+      "Teal"
+    ],
+    "material": "Polyester",
+    "brand": "Forever 21",
+    "occasion": "Work",
+    "neckStyle": "Round",
+    "price": 69
+  },
+  {
+    "name": "Formal Pencil",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Black",
+      "Dark Gray"
+    ],
+    "material": "Polyester",
+    "brand": "H&M",
+    "occasion": "Work",
+    "neckStyle": "Boat Neck",
+    "price": 79
+  },
+  {
+    "name": "Chiffon Bridesmaid",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Lavender",
+      "Blush"
+    ],
+    "material": "Chiffon",
+    "brand": "Zara",
+    "occasion": "Formal",
+    "neckStyle": "Sweetheart",
+    "price": 139
+  },
+  {
+    "name": "Denim Shirt",
+    "size": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "color": [
+      "Blue",
+      "Light Blue"
+    ],
+    "material": "Denim",
+    "brand": "Mango",
+    "occasion": "Casual",
+    "neckStyle": "Collared",
+    "price": 59
+  },
+  {
+    "name": "Knitted Bodycon",
+    "size": [
+      "M",
+      "L"
+    ],
+    "color": [
+      "Beige",
+      "Brown"
+    ],
+    "material": "Wool",
+    "brand": "Forever 21",
+    "occasion": "Casual",
+    "neckStyle": "Turtleneck",
+    "price": 74
+  },
+  {
+    "name": "Tulle Ball Gown",
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Pink",
+      "Rose"
+    ],
+    "material": "Tulle",
+    "brand": "H&M",
+    "occasion": "Formal",
+    "neckStyle": "Strapless",
+    "price": 199
+  },
+  {
+    "name": "Pleated Maxi",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Green",
+      "Mint"
+    ],
+    "material": "Polyester",
+    "brand": "Mango",
+    "occasion": "Party",
+    "neckStyle": "One-Shoulder",
+    "price": 89
+  },
+  {
+    "name": "Sequin Party",
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Silver",
+      "Gold"
+    ],
+    "material": "Sequin",
+    "brand": "Zara",
+    "occasion": "Party",
+    "neckStyle": "Round",
+    "price": 149
+  },
+  {
+    "name": "Halter Beach",
+    "size": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "color": [
+      "White",
+      "Sky Blue"
+    ],
+    "material": "Cotton",
+    "brand": "Forever 21",
+    "occasion": "Casual",
+    "neckStyle": "Halter",
+    "price": 44
+  },
+  {
+    "name": "Mesh Party",
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "color": [
+      "Black",
+      "Gray"
+    ],
+    "material": "Mesh",
+    "brand": "H&M",
+    "occasion": "Party",
+    "neckStyle": "Spaghetti Strap",
+    "price": 129
+  },
+  {
+    "name": "Lace Mini",
+    "size": [
+      "XS",
+      "S"
+    ],
+    "color": [
+      "White",
+      "Ivory"
+    ],
+    "material": "Lace",
+    "brand": "Mango",
+    "occasion": "Formal",
+    "neckStyle": "Sweetheart",
+    "price": 99
+  }
+]

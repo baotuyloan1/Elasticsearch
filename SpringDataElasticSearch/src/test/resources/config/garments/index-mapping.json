@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "name": {
+      "type": "text",
+      "fields": {
+        "completion": {
+          "type": "completion"
+        }
+      }
+    },
+    "size": {
+      "type": "keyword"
+    },
+    "color": {
+      "type": "keyword"
+    },
+    "material": {
+      "type": "keyword"
+    },
+    "brand": {
+      "type": "keyword"
+    },
+    "occasion": {
+      "type": "keyword"
+    },
+    "neckStyle": {
+      "type": "keyword"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}
