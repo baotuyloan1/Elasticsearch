@@ -434,5 +434,99 @@ building range queries). The date field is also stored in the BKD tree.
 The date will be converted to a long value. It's basically represented the number of milliseconds since the epoch.
 UTF (default if not specified).
 
+# Full-Text Search
+
+Elasticsearch uses query DSL (Domain-Specific Language). Using this, we can define complex queries in a structured JSON
+format.
+
+# Relevance
+
+Elasticsearch ues techniques like Term Frequency and Document Frequency to calculate the relevance of search results.
+we can also tweak the relevance score.
+
+# Leaf and Compound Queries.
+
+- Strict: the relevance score does not make sense. In general, all the results have the same score. By default,
+  Elasticsearch will calculate the score as one for these records.
+    - ids
+    - term/terms
+    - range
+    - prefix
+    - wildcard
+    - regexp
+- Flexible: We use this for text search with uncertainty, Ambiguity. These queries they calculate the relevance score.
+    - match
+    - multi match
+    - match phrase
+
+These queries are also known as leaf queries (ids, term/terms, range, prefix, wildcard, regexp, match, multi match,
+match phrase). They look at specific field and try to bring the documents.
+
+### Compound Queries
+
+- These compound queries include multiple leaf queries to build a complex logic.
+
+### Bool Query
 
 
+
+It combines multiple queries flexibly.
+It has four clauses: must, must_not, should, filter
+
+#### Filter
+- Filter: It's used to filter documents. We can provide multiple queries.
+  ![img_13.png](img_13.png)
+
+```json
+{
+  "bool": {
+    "filter": [
+      {
+        "range": {
+          "price": {
+            "lt": "100"
+          }
+        }
+      },
+      {
+        "range": {
+          "price": {
+            "gt": "4"
+          }
+        }
+      }
+    ]
+  }
+}
+
+```
+
+When we provide multiple queries, these are all AND operators.
+Usually the filter in Bool query is good to filter documents using the strict queries like ids, range, term, etc...
+
+#### must_no
+
+It is simply the opposite of filter, logical not.
+
+The results where the brand is not Nike.
+![img_15.png](img_15.png)
+
+
+### must = filter + score
+
+Must accept a list of queries
+Must calculate score for the selected documents.
+It does not matter if the query is strict or flexible.
+
+### should
+
+- Operator : AND
+- Affects Score: yes
+- Filters Documents: depends!!
+
+
+![img_16.png](img_16.png)
+
+Filters Documents?
+- Yes - If no must or filter clause are defined, the 'should' clauses filter documents.
+- No - If must or filter clauses exist, should clauses do NOT filter. They only contribute to the score.
